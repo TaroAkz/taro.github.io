@@ -500,11 +500,33 @@ a {
     border-radius: 6px;
     color: var(--text-secondary);
     font-size: 0.9rem;
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.btn-link:not([href="#"]):hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background: rgba(211, 105, 79, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.btn-link:not([href="#"]):active {
+    transform: translateY(0);
 }
 
 .disabled-links .btn-link {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+.disabled-links .btn-link:hover {
+    border-color: var(--text-muted);
+    color: var(--text-secondary);
+    background: transparent;
+    transform: none;
+    box-shadow: none;
 }
 
 /* Skills Section */
